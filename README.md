@@ -45,7 +45,7 @@ In the actual version of Flet timer you can use the following functions:
 
 ---
 
-*by José Joaquín Rojas Romero aka tric0 - josrojrom1@alum.us.es*
+*by 1337KR3W - pepecodesdev@gmail.com*
 
 
 
