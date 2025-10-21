@@ -1,6 +1,7 @@
 import flet as ft
+from flet_audio import Audio
 import time
-
+#                                                                         by 1337KR3W - pepecodesdev@gmail.com
 def main(page: ft.Page):
 
     # Parámetros de la ventana principal
@@ -15,8 +16,8 @@ def main(page: ft.Page):
     page.window_maximizable = False
     page.window_resizable = False
     # Sonidos
-    start_sound = ft.Audio(src="resources/sounds/tic-tac.wav", volume=1)
-    end_sound = ft.Audio(src="resources/sounds/end_timer.wav", volume=1)
+    start_sound = Audio(src="resources/sounds/tic-tac.wav", volume=1)
+    end_sound = Audio(src="resources/sounds/end_timer.wav", volume=1)
     page.overlay.append(start_sound)
     page.overlay.append(end_sound)
 
@@ -49,7 +50,7 @@ def main(page: ft.Page):
                          width=100, 
                          max_length=2, 
                          counter_text=" ", 
-                         border_color=ft.colors.DEEP_PURPLE_400, 
+                         border_color=ft.Colors.DEEP_PURPLE_400, 
                          text_size=25)
     
 
@@ -64,11 +65,11 @@ def main(page: ft.Page):
 
 
 
-    minutes = ft.TextField(input_filter=only_digits_filter, label="minutes", on_change=textbox_changed,text_align=ft.TextAlign.CENTER, width=100, max_length=2, counter_text=" ", border_color=ft.colors.DEEP_PURPLE_400, text_size=25)
-    seconds = ft.TextField(input_filter=only_digits_filter, label="seconds", on_change=textbox_changed,text_align=ft.TextAlign.CENTER, width=100, max_length=2, counter_text=" ", border_color=ft.colors.DEEP_PURPLE_400, text_size=25)
+    minutes = ft.TextField(input_filter=only_digits_filter, label="minutes", on_change=textbox_changed,text_align=ft.TextAlign.CENTER, width=100, max_length=2, counter_text=" ", border_color=ft.Colors.DEEP_PURPLE_400, text_size=25)
+    seconds = ft.TextField(input_filter=only_digits_filter, label="seconds", on_change=textbox_changed,text_align=ft.TextAlign.CENTER, width=100, max_length=2, counter_text=" ", border_color=ft.Colors.DEEP_PURPLE_400, text_size=25)
     text = ft.Text()
 
-    github = ft.IconButton(url="https://github.com/tric0ma", content=ft.Image(src="resources/icons/github-mark.png", width=35, height=30))
+    github = ft.IconButton(url="https://github.com/1337KR3W/flet_timer", content=ft.Image(src="resources/icons/github-mark.png", width=35, height=30))
     
     def bigger_display(e):
         hours.text_size = 39
@@ -134,7 +135,7 @@ def main(page: ft.Page):
         page.update()
 
     # Botones del cronómetro
-    start_btn = ft.ElevatedButton(text="Start", on_click=start_timer, icon=ft.icons.PLAY_ARROW)
+    start_btn = ft.ElevatedButton(text="Start", on_click=start_timer, icon=ft.Icons.PLAY_ARROW)
     # Fila con los botones
     buttons = ft.Row(
         [
